@@ -3,7 +3,7 @@ require('dotenv/config');
 
 function authJwt() {
     const secret = process.env.secret;
-    const api = process.env.API_URL;
+    const api = process.env.API_URL || '/api/v1';
 
     return expressJwt({
         secret,
