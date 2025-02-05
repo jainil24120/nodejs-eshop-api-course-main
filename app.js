@@ -10,7 +10,7 @@ const errorHandler = require('./helpers/error-handler');
 
 app.use(cors());
 app.options('*', cors())
-
+const PORT = process.env.PORT || 4000;
 //middleware
 app.use(express.json());
 app.use(morgan('tiny'));
@@ -49,7 +49,7 @@ app.get('/', (req, res) => {
 });
 
 //Server
-app.listen(4000, () => {
+app.listen(PORT , () => {
 
     console.log('server is running http://localhost:4000');
 })
