@@ -44,6 +44,10 @@ mongoose.connect(process.env.CONNECTION_STRING, {
         console.log(err);
     })
 
+app.get('/', (req, res) => {
+    res.send('Server is running');
+});
+
 //Server
 app.listen(4000, () => {
 
