@@ -31,5 +31,9 @@ async function isRevoked(req, payload, done) {
     
     return done(null, false); // Allow all authenticated users
 }
+app.get('/', (req, res) => {
+    res.send('Server is running');
+});
+
 
 module.exports = authJwt;
